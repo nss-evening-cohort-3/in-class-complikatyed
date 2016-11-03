@@ -5,7 +5,7 @@
 
 <h2>Angular</h2>
 <div ng-controller="FormController">
-    @using (Html.BeginForm("Angular", "Basics", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    @using (Html.BeginForm("Angular", "Basics", FormMethod.Post, new { id = "myform" }))
     {
         @Html.AntiForgeryToken()
 
@@ -19,7 +19,7 @@
                 @Html.Password("PasswordConfirmation")
             </div>
             <div id="razorSubmit" class="">
-                <button ng-click=formSubmit()>SUBMIT!</button>
+                <button ng-click=formSubmit($event)>SUBMIT!</button>
             </div>
 
     }
