@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Angular";
+}
+
+<h2>Angular</h2>
+<div ng-controller="FormController">
+    @using (Html.BeginForm("Angular", "Basics", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+
+            <div id="razorEmail " class="">
+                @Html.TextBox("email")
+            </div>
+            <div id="razorPassword" class="">
+                @Html.Password("password")
+            </div>
+            <div id="razorPasswordConfirmation" class="">
+                @Html.Password("PasswordConfirmation")
+            </div>
+            <div id="razorSubmit" class="">
+                <input type="submit" value="SUBMIT!" />
+            </div>
+
+    }
+</div>
+ 
+
+
+
